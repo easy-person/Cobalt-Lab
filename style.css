@@ -42,3 +42,5 @@
 #intro{container-type:inline-size}#title{font-size:clamp(14px,4.4vw,35px);line-height:1.55}#title .title-line{display:block;white-space:nowrap}@supports(font-size:1cqw){#title{font-size:clamp(14px,5cqw,35px)}}
 
 .isomer-hint{border:1px solid #dce5d4;border-radius:9px;background:#fafcf6;padding:0 14px;margin:14px 0}.isomer-hint summary{padding:12px 0;min-height:44px;font-size:14px}.isomer-hint ul{padding-left:22px;margin:4px 0 12px;line-height:2;font-size:14px}.isomer-hint .note{margin:8px 0 14px}
+
+@media(max-width:650px){nav{grid-template-columns:repeat(3,minmax(0,1fr))}nav button{font-size:12px;padding:8px 3px}nav b{margin-right:3px}}
