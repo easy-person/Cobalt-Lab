@@ -66,3 +66,11 @@ html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}body{overflow-wrap:br
 }
 @media(any-pointer:coarse){.structure-canvas .z-turn{position:static;display:block;width:fit-content;max-width:calc(100% - 12px);min-height:44px;margin:4px auto 10px;padding:8px;line-height:1.6;box-shadow:none}}
 @media(max-width:650px){.comparison-item{max-width:none}.comparison-item .structure-viewport{aspect-ratio:1}.comparison-item .structure-viewport svg{width:100%;height:100%;max-height:none}.comparison-item .comparison-caption{min-height:48px}.comparison-item .saved-settings{max-width:100%;margin:6px 0 10px}.comparison-item .record-heading{min-height:74px}.comparison-item .structure-canvas .z-turn{font-size:10px;padding:7px 4px}}
+
+/* Put record actions on one row and remove the separate delete footer. */
+.comparison-item .record-heading{min-height:44px;gap:6px!important}
+.record-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;align-items:center;min-width:0}
+.comparison-item .record-actions .btn,.comparison-item .record-actions .reorder-handle{width:auto;min-width:0;min-height:44px;margin:0;padding:6px 7px;font-size:11px;white-space:nowrap}
+.comparison-item .record-actions .btn{background:transparent;border-color:#e0e4da;color:#677361;font-weight:500}
+.comparison-item .saved-settings{margin-bottom:0}
+@media(max-width:650px){.comparison-item .record-heading{display:grid;grid-template-columns:1fr;min-height:0;padding-bottom:6px}.record-actions{width:100%;grid-template-columns:minmax(0,1fr) 38px;gap:4px}.comparison-item .record-actions .btn,.comparison-item .record-actions .reorder-handle{font-size:10px;padding:5px 2px;gap:2px}.comparison-item .record-actions .reorder-handle span{font-size:16px}}
