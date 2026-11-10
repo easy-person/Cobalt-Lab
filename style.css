@@ -86,3 +86,9 @@ html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}body{overflow-wrap:br
 .mirror-card>.tabs button{min-width:0;padding:8px 2px;font-size:12px;line-height:1.5}
 .mirror-error:not(.sr-only){font-size:12px;line-height:1.7;color:#77552f;background:#faf2e5;padding:8px;border-radius:7px;margin-top:8px;overflow-wrap:anywhere}
 @media(max-width:650px){.mirror-card>.tabs{gap:3px;padding:3px}.mirror-card>.tabs button{font-size:10px;letter-spacing:-.02em;min-height:44px}}
+/* Keep both mirror reset actions side by side on every screen. */
+.mirror-card .mirror-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.mirror-card .mirror-actions .btn:first-child{grid-column:1/-1}
+.mirror-card .mirror-actions .btn:last-child{grid-column:auto}
+.mirror-card .mirror-actions .btn{min-width:0;min-height:44px;line-height:1.5;padding:8px 3px}
+@media(max-width:650px){.mirror-card .mirror-actions{gap:4px}.mirror-card .mirror-actions .btn{font-size:10px;padding:7px 2px}}
