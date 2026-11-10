@@ -54,3 +54,15 @@ html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}body{overflow-wrap:br
 .structure-canvas .z-turn{position:absolute;right:8px;bottom:8px;z-index:2;border:1px solid #b9cda6;border-radius:8px;background:#fffffff2;color:#31563d;min-height:44px;padding:8px 10px;font:600 12px 'Noto Sans JP',sans-serif;cursor:pointer;touch-action:manipulation;box-shadow:0 2px 7px #315f4512}.structure-canvas .z-turn:hover{background:#edf5e3}.structure-canvas .z-turn:focus-visible{outline:3px solid #8caa55;outline-offset:3px}#content #molecule .z-turn,#content [id^="saved-model-"] .z-turn,#content [id^="mirror-model-"] .z-turn{touch-action:manipulation}@media(max-width:650px){.structure-canvas .z-turn{right:3px;bottom:3px;padding:6px 5px;font-size:11px;min-height:40px}}
 
 #content.dragging-structure[data-drag-axis="horizontal"],#content.dragging-structure[data-drag-axis="horizontal"] *{cursor:ew-resize!important}#content.dragging-structure[data-drag-axis="vertical"],#content.dragging-structure[data-drag-axis="vertical"] *{cursor:ns-resize!important}.is-z-turning{position:relative}.is-z-turning .z-turn{cursor:wait;background:#eff5e5;opacity:.85;min-width:80px}.is-z-turning .touch-rotate-handle{pointer-events:none}
+
+/* Keep structure controls outside the mobile model and prevent records stretching across a row. */
+.structure-viewport{position:relative;width:100%;min-width:0}
+.comparison-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),320px));justify-content:start;align-items:stretch}
+.comparison-item{width:100%;min-width:0;max-width:320px}
+@media(max-width:1100px){
+ .structure-canvas .z-turn{position:static;display:block;width:fit-content;max-width:calc(100% - 12px);min-height:44px;margin:4px auto 10px;padding:8px 7px;font-size:11px;line-height:1.6;box-shadow:none}
+ .comparison-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .comparison-item{max-width:320px;justify-self:center}
+}
+@media(any-pointer:coarse){.structure-canvas .z-turn{position:static;display:block;width:fit-content;max-width:calc(100% - 12px);min-height:44px;margin:4px auto 10px;padding:8px;line-height:1.6;box-shadow:none}}
+@media(max-width:650px){.comparison-item{max-width:none}.comparison-item .structure-viewport{aspect-ratio:1}.comparison-item .structure-viewport svg{width:100%;height:100%;max-height:none}.comparison-item .comparison-caption{min-height:48px}.comparison-item .saved-settings{max-width:100%;margin:6px 0 10px}.comparison-item .record-heading{min-height:74px}.comparison-item .structure-canvas .z-turn{font-size:10px;padding:7px 4px}}
