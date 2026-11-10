@@ -186,3 +186,6 @@ nav button:not(.active):hover{background:#e4eadf;color:#2f513a}
 @media(min-width:901px){aside{position:fixed;inset:0 auto 0 0;z-index:20}}
 @media(max-width:900px){aside{position:sticky;inset:auto;top:0;z-index:20}}
 @media(orientation:landscape) and (max-height:600px) and (hover:none) and (pointer:coarse){aside{position:sticky;inset:auto;top:0;z-index:20}}
+
+/* Empty selection guidance does not reserve space; action feedback stays visible. */
+#status:empty{display:none}
