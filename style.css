@@ -74,3 +74,9 @@ html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}body{overflow-wrap:br
 .comparison-item .record-actions .btn{background:transparent;border-color:#e0e4da;color:#677361;font-weight:500}
 .comparison-item .saved-settings{margin-bottom:0}
 @media(max-width:650px){.comparison-item .record-heading{display:grid;grid-template-columns:1fr;min-height:0;padding-bottom:6px}.record-actions{width:100%;grid-template-columns:minmax(0,1fr) 38px;gap:4px}.comparison-item .record-actions .btn,.comparison-item .record-actions .reorder-handle{font-size:10px;padding:5px 2px;gap:2px}.comparison-item .record-actions .reorder-handle span{font-size:16px}}
+
+/* Equal-size actions follow the angle settings. */
+.comparison-item>.record-heading{display:flex;justify-content:center;min-height:0;padding-bottom:6px}
+.comparison-item>.record-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;width:100%;margin-top:auto;padding-top:10px}
+.comparison-item>.record-actions .btn,.comparison-item>.record-actions .reorder-handle{width:100%;min-width:0;min-height:44px;padding:6px 3px;font-size:11px;line-height:1.5;display:flex;align-items:center;justify-content:center}
+@media(max-width:650px){.comparison-item>.record-actions{gap:4px;padding-top:8px}.comparison-item>.record-actions .btn,.comparison-item>.record-actions .reorder-handle{font-size:10px;padding:5px 2px}}
