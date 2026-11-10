@@ -189,3 +189,7 @@ nav button:not(.active):hover{background:#e4eadf;color:#2f513a}
 
 /* Empty selection guidance does not reserve space; action feedback stays visible. */
 #status:empty{display:none}
+/* Wide desktop: up to four equally sized saved structures per row. */
+@media(min-width:1101px){.comparison-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.comparison-item{max-width:none}}
+@media(min-width:1200px){.comparison-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1280px){main{max-width:1830px}.comparison-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
